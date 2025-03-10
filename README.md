@@ -2,6 +2,8 @@
 
 This repository was created for educational purposes to help learners understand how to write and use unit tests in Rust.
 
+> **Disclaimer:** This repository is used solely for the personal learning and development of the owner.
+
 ## Overview
 
 The primary goal of this project is to demonstrate and explore unit testing in Rust. Through various examples and exercises, you will learn how to set up and run tests, write effective test cases, and integrate testing into your development workflow.
