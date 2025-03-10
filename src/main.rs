@@ -2,25 +2,25 @@ fn main() {
     println!("Hello, world!");
 }
 
-// simple test untuk mencoba unit test
-#[test] //atribut wajib yang diperlukan untuk melakukan pengujian
+// A simple test to try unit testing.
+#[test] //The mandatory attribute required for testing.
 fn simple_test() {
     println!("Hello, world!");
 }
 
-// fungsi penambahan angka
+// A function for adding numbers.
 fn addition(a: i32, b: i32) -> i32 {
     a + b
 }
 
-// test untuk fungsi penambahan angka menggunakan macro assertion dari rust
+// A test for the number addition function using Rust's assertion macro.
 #[test]
 fn addition_test() {
     let result = addition(10, 20);
     assert_eq!(result, 30,"10 + 20 it's should be 30");
 }
 
-// fungsi simpel menjalankan aplikasi untuk pengecekan
+// A simple function that runs the application with checks.
 fn start_application(host:&str,port:u16){
     if host == "localhost"{
         panic!("You must not use localhost");
@@ -29,9 +29,9 @@ fn start_application(host:&str,port:u16){
     }
 }
 
-// pengujian fungsi simpel menjalankan aplikasi yang mengandung panic
+// A test for the simple function running an application that includes a panic.
 #[test]
-#[should_panic] //atribut pengujian yang menyatakan bahwa fungsi yang dites harus terjadi panic
+#[should_panic] //The test attribute that indicates that the tested function should panic.
 fn starting_app_test() {
     start_application("localhost",8000);
 }
