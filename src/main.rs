@@ -3,7 +3,8 @@ fn main() {
 }
 
 // A simple test to try unit testing.
-#[test] //The mandatory attribute required for testing.
+#[test] // Marks this function as a test function, so it will be executed when running `cargo test`.
+
 fn simple_test() {
     println!("Hello, world!");
 }
@@ -34,4 +35,12 @@ fn start_application(host:&str,port:u16){
 #[should_panic] //The test attribute that indicates that the tested function should panic.
 fn starting_app_test() {
     start_application("localhost",8000);
+}
+
+#[test]
+#[ignore]
+// Indicates that this test will be ignored by default when running `cargo test`.
+// To run ignored tests, use `cargo test -- --ignored`.
+fn ignored_test() {
+    println!("This test is ignored.");
 }
