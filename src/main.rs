@@ -1,5 +1,13 @@
+// Declares the `modules` module, which allows access to `modules.rs` and its submodules like `module_a`.
+mod modules;
+
 fn main() {
     println!("Hello, world!");
+
+    /* Calls the `hello_name` function from `module_a`, but the return value is ignored.
+        This line does nothing meaningful because the function returns a `String`,
+        but the value is not printed or used. */
+    modules::module_a::hello_name("gege");
 }
 
 // A simple test to try unit testing.
